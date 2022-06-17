@@ -54,13 +54,13 @@ playerstats$rec_qb <- `is.na<-`(playerstats$rec_qb,0)
 
 #Bring in league settings from Sleeper
 
-leaguelist <- sleeper_userleagues("youngsimba",2022)
+leaguelist <- sleeper_userleagues("ENTER SLEEPER USERNAME HERE",2022)
 
 #ABOVE ITEMS ONLY NEED TO BE RAN FIRST TIME SESSION IS STARTED
 
 #START HERE TO RUN FOR NEW LEAGUE
 
-LID <- leaguelist %>% filter(league_name == "Isaac Bruce Football") %>% pull(league_id)
+LID <- leaguelist %>% filter(league_name == "ENTER SLEEPER LEAGUE NAME HERE") %>% pull(league_id)
 
 query <- paste('league/',LID,sep = "")
 leagueinfo <- sleeper_getendpoint(query)
